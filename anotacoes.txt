@@ -1,0 +1,73 @@
+O que é uma REST API?
+
+API é uma aplicação que permite integração de diferentes sistemas, padronizando a comunicação desses.
+
+REST é um conjunto de convensões arquiteturais que utiliza algumas camadas HTTP para envio e recebimento de informações.
+
+REST API, é uma aplicação que segue determinada convensão.
+
+O que é RESTfull?
+
+É um sistema que segue todas as boas práticas do REST. Isso envolve seguir padrões para definição de recursos, status de resposta, cache. codificação dos dados, forma de envio e de recebimento entre outra coisas.
+
+O que é um recurso?
+
+Case:
+
+Jornalista posta no painel administrativo, tagueando as notícias e o usuário acessa um portal que permite ler essas notícias filtrando por tags.
+A API conecta o painel administrativo ao banco de dados e o banco de dados ao portal acessado pelo usuário.
+O recurso pode ser percebido através dos personagens desse case, no caso o jornalista, a tag(categoria) da notícia e a notícia em si.
+Nesse case, serão agrupados os recursos tag e notícia, para que o usuário possa solicitar a cetegoria de notícias e receba as notícias desejadas.
+
+Representação dos recurso no padrão REST:
+
+site/jornalistas
+site/categorias
+site/categorias/{categoria_id}/noticias
+
+O que é coleção?
+
+Coleção é um agrupamento de recursos.
+
+/jornalistas
+Terei a coleção de jornalistas
+
+/categorias
+Terei a coleção de categorias
+
+/categorias/{categoria_id}/noticias
+Terei a coleção de notícias categorizadas
+
+O que é um elemento?
+
+Elemento se refere a um item específico da minha coleção.
+
+/jornalistas/{jornalista_id}
+
+Terei umm jornalista específico
+
+/categorias/{categoria_id}
+
+Terei uma categorias específica
+
+O que é um sub-elemento?
+
+Sub-elemento é um item específico dentro de outro item que abarca vários itens, como a categoria abarca notícias.
+
+/categorias/{categoria_id}/noticias/{noticia_id}
+Terei uma notícia específica que está dentro de uma categoria específica.
+
+O que são endpoints?
+
+Para definir endpoint precisamos definir os dados necessários para um sistema se comunicar com uma API.
+
+Protocolo: HTTP ou HTTPS?
+Host: api.site.com.br - Dominio
+Path: /categorias/noticias - Caminho
+
+Endpoint é a junção de todas essas informações, ou seja, ele é o endereço específico de determinado recurso na API.
+
+Estrutura de endpoint
+
+protocolo://dominio/nome-da-api/versao/caminho/do/recurso
+https://api.site.com/news-api/v1/categorias/1/noticias/5
