@@ -107,3 +107,31 @@ Endpoint para remover uma notícia, também é direcioanda a um elemento, pois a
 
 [DELETE] https://api.site.com.br/news-api/v1/categorias/1/noticias/12
 
+
+Versionamento
+
+Atualizações serão necessárias ao longo do tempo e mudanças estruturais que podem quebrar o resultado da entrega da API devem ser inseridas em novas versões da aplicação sem que a versão anterior seja removida, permitindo que o usuário atualize o sistema antes que a versãoantiga saia do ar.
+
+Exemplo:
+
+Na api/v1/categorias o json era entregue assim:
+
+{
+  id:1,
+  titulo: bablabla,
+  conteudo: blablabla
+}
+
+Na api/v1/categorias o json era entregue assim:
+
+{
+  id_noticia:1,
+  titulo: bablabla,
+  conteudo: blablabla
+}
+
+Somente essa alteração quebraria a entrega do conteúdo deixando o usuário sem resultado.
+
+Como é feita?
+
+Em "branchs" diferentes tenho ambas versões rodando.
