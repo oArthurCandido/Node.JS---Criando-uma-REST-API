@@ -71,3 +71,39 @@ Estrutura de endpoint
 
 protocolo://dominio/nome-da-api/versao/caminho/do/recurso
 https://api.site.com/news-api/v1/categorias/1/noticias/5
+
+Métodos REST
+Revisão dos verbos e suas utilidades
+
+GET: Envio de parâmetros via URL, recebimento de informações no corpo da resposta. Usado para consulta de registros e busca de informação.
+
+POST: Envio de parâmetros via corpo, recebimento de nformações no corpo da resposta. Usado para criar registros e enviar informações.
+
+PUT: Envio de parâmetros via URL e corpo, recebimento de informações no corpo da resposta. Utilizado para atualizar registros totalmente. enviar informações
+
+DELETE: Envio de parâmetros via URL, recebimento de informações no corpo da resposta. Usado para excluir registros.
+
+PATCH:Envio de parâmetros via URL, recebimento de informações no corpo da resposta. Usado para atualizar registros parcialmente.
+
+OPTIONS:Envio de parâmetros via URL, recebimento de informações no cabeçalho da resposta. Usado para verificar quais métodos(verbos) estão disponíveis.
+
+HEAD: Envio de parâmetros via URL, recebimento de informações no cabeçalho da resposta. Usado para pegar somente as informções de cabeçalho do registro.
+
+Relação entre verbos e recursos/endpoints
+
+Endpoint para buscar todas as notícias:
+
+[GET] https://api.site.com.br/news-api/v1/categorias/1/noticias
+
+Endpoint para criar uma nova notícia
+
+[POST] https://api.site.com.br/news-api/v1/categorias/1/noticias
+
+Endpoint para atualizar uma notícia - aqui não capturamos mais todas as notícias da categoria, pois não faria sentido atualizar diversas notícias de uma vez.
+
+[PUT] https://api.site.com.br/news-api/v1/categorias/1/noticias/12
+
+Endpoint para remover uma notícia, também é direcioanda a um elemento, pois a remoção de todos os registros não é segura.
+
+[DELETE] https://api.site.com.br/news-api/v1/categorias/1/noticias/12
+
