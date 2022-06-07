@@ -135,3 +135,22 @@ Somente essa alteração quebraria a entrega do conteúdo deixando o usuário se
 Como é feita?
 
 Em "branchs" diferentes tenho ambas versões rodando.
+
+Status codes
+
+O que são os status codes?
+Padrão de 3 dígitos que indica o resultado da tentativa de tratar a requisição.
+
+São divididos em 4 classes:
+Informacioais(1xx), sucesso(2xx), redirecionamento (3xx), erro(cliente(4xx) servidor(5xx))
+
+Clients não precisam saber cada um dos codes, mas as classes sim.
+
+Documentação de referência para REST API:
+
+https://restfulapi.net/
+
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP
+
+
+
