@@ -212,4 +212,22 @@ Tendo criado o serviço de busca categorias no path localhost:3000/news-api/v1/c
 
 Comando: npm install mysql
 
-Copiamos a importação do módulo, criamos a conexão com createConnection e setamos a query para pegar as colunas da tabela categoria no mySQL Workbench.
+Copiamos a importação do módulo seguindo a docuemtação linkada acima, criamos a conexão com createConnection e setamos a query para pegar as colunas da tabela categoria (id e nome) no mySQL Workbench.
+
+*IMPORTANTE* a linha que seta as colunas é gerada pelo mySQL Workbench ao clicar em SELCT ROWS de uma tabela.
+
+Feita a conexão entre o DB e a aplicação, vamos cria ro serviço de listagem de noticia por categoria.
+
+Copiamos o serviço anterior, setamos o path para '/news-api/v1/categorias/:categoriaId/noticias', setamos a query para pegar as colunas da tabela noticias(id e titulo).
+
+*IMPORTANTE* a linha que seta as colunas é gerada pelo mySQL Workbench ao clicar em SELCT ROWS de uma tabela.
+
+Criado o serviço de listagem vamos criar o serviço de apresentação de uma notícia específica copiando o serviço anterior alterando o path para /news-api/v1/categorias/:categoriaId/noticias/:noticiaId' e setando a query para pegar as colunas (id, categoria_id, titulo, conteudo)
+
+Documentação de referência Express:
+
+https://expressjs.com/
+
+
+
+
