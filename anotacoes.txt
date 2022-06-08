@@ -171,3 +171,5 @@ Postman.
 É uma ferramenta para simplificar os testes de requisições no desenvolvimento de uma API.
 
 O que iremos construir, prática de Express.
+
+Sistema de postagem e leitura de notícias, jornalista posta em painel administrativo as notícias, usuário acessa notícias em um portal.
