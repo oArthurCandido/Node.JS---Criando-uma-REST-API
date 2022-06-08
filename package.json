@@ -1,0 +1,30 @@
+{
+  "name": "news-api",
+  "version": "1.0.0",
+  "description": "API do sistema de noticias",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oArthurCandido/Node.JS---Criando-uma-REST-API.git"
+  },
+  "keywords": [
+    "news",
+    "noticias",
+    "categorias",
+    "API",
+    "REST"
+  ],
+  "author": "Arthur Candido, Erik Borges teacher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oArthurCandido/Node.JS---Criando-uma-REST-API/issues"
+  },
+  "homepage": "https://github.com/oArthurCandido/Node.JS---Criando-uma-REST-API#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3"
+  }
+}

@@ -173,3 +173,41 @@ Postman.
 O que iremos construir, prática de Express.
 
 Sistema de postagem e leitura de notícias, jornalista posta em painel administrativo as notícias, usuário acessa notícias em um portal.
+
+O database escolhido é o mySQL utilizando como adm o mySQL Workbench
+
+Após criar o DB e duas tabelas iniciamos na pasta do projeto o NPM com o comando "npm init".
+
+COm o package.json criado vamos implementar o express:
+
+https://expressjs.com/
+
+Comando de instalação do express: $ npm install express --save
+
+Como iniciar?
+
+https://expressjs.com/en/starter/hello-world.html
+
+//inclusão dos pacotes
+const express = require('express');
+//instaciando o express
+const app = express();
+//definição da porta
+const port = 3000;
+// Serviço de Hello World!
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+//Subindo o servidor node
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
+
+Com esse código temos o sevidor rodando no localhost:3000 o Hello World!
+
+A partir daqui copiamos o trecho de criação de serviço, para criar um novo serviço de busca de categorias. Já consultamos o serviço de Hello World através do Postman.
+
+Tendo criado o serviço de busca categorias no path localhost:3000/news-api/v1/categorias resultando em um array vazio, vamos agoa conectar a aplicação ao banco de dados mySQL (doc de referência: https://expressjs.com/en/guide/database-integration.html#mysql)
+
+Comando: npm install mysql
