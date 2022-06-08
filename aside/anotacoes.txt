@@ -211,3 +211,5 @@ A partir daqui copiamos o trecho de criação de serviço, para criar um novo se
 Tendo criado o serviço de busca categorias no path localhost:3000/news-api/v1/categorias resultando em um array vazio, vamos agoa conectar a aplicação ao banco de dados mySQL (doc de referência: https://expressjs.com/en/guide/database-integration.html#mysql)
 
 Comando: npm install mysql
+
+Copiamos a importação do módulo, criamos a conexão com createConnection e setamos a query para pegar as colunas da tabela categoria no mySQL Workbench.
