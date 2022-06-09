@@ -229,5 +229,66 @@ Documentação de referência Express:
 https://expressjs.com/
 
 
+SEGURANÇA.
+
+Problemas com acessos não autorizados.
+
+- Acesso não autorizados
+   Acesso realizado sem autorização por erro de proteção do dado, ausência de proteção ou caminho de acesso incorreto.
+- Ataque de força bruta
+   Realizado por meio de bots, um aceso de força bruta é a tentiva de acessos contínuos com várias senhas diferentes até ter sucesso.
+- Roubo de credenciais
+   Um usuário teve seu email e senha roubado de alguma forma.
+- Session hijacking
+   Um usuário tem o token de sua sessão acessado por um terceiro.
+
+Como tratar esse problema?
+
+- Acesso não autorizado: processo seguro de autenticação (ex. OAuth2).
+
+- Ataque de força bruta: bloqueio d IP, bloqueio de usuário, MFA( multi factor authentication), Rate Limit, etc.
+
+- Roubo de credenciais: padrões seguros de senha, MFA, processo seguros de gerenciamento de credenciais, etc.
+
+- Session hijacking: SSL, expiração de sessão, reconhecimento de padrões, etc.
+
+Ataques de integridade
+
+Injection -  Inserssão de dados via sql, json ou xml, realziando requisições maliciosa.
+
+Cross-site Scripting - Um site que se passa por outro para roubar dados.
+
+Request Forgery - Parecido com sequestro de sessão
+
+Como proteger o sistema desses ataques?
+
+Injection: Filtros em todos os dados recebidos
+
+Cross-site Scripting: filtros especializados nos dados recebidos, encodar dados enviados.
+
+Request Forgery:Anti-CSRF token filtro que gera tokens em cada área do site e compara os tokens utilziados com a origem do usuário.
+
+SOBRECARGA.
+
+Ataque direcionado a impedir que o usuário consiga acessar o serviço sobrecarregando o sitema.
+
+Mais comuns:
+
+DDoS - Faz várias requisições partindo de diversos IPs rackeados
+
+Buffer Overflow - O atacante gera entradas tão grandes que sobrecarrega o sistema gerando vulnerabilidades.
+
+Injection - 
+
+Como impedir?
+
+DDoS: negação de serviço, bloqueio de IP, ferramentas de IA.
+
+Buffer Overflow: canaries, bounds checking, tagging
+
+Injections: filtros em todos os dados recebidos.
+
+Implementações equivocadas.
+
 
 
